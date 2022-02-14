@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\App;
+
 return [
 
     /*
@@ -40,6 +42,22 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+
+        // 'super_admin' => [
+        //     'driver' => 'session',
+        //     'provider' => 'super_admin',
+        // ],
+
+        // 'pengurus' => [
+        //     'driver' => 'session',
+        //     'provider' => 'users',
+        // ],
+
+        // 'anggota' => [
+        //     'driver' => 'session',
+        //     'provider' => 'users',
+        // ],
+
     ],
 
     /*
@@ -64,6 +82,11 @@ return [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
         ],
+
+        // 'super_admin' => [
+        //     'driver' => 'eloquent',
+        //     'model' => \App\Models\super_admin::class,
+        // ],
 
         // 'users' => [
         //     'driver' => 'database',
@@ -93,6 +116,14 @@ return [
             'expire' => 60,
             'throttle' => 60,
         ],
+
+        // 'super_admin' => [
+        //     'provider' => 'super_admin',
+        //     'table' => 'password_resets',
+        //     'expire' => 60,
+        //     'throttle' => 60,
+        // ],
+
     ],
 
     /*
