@@ -12,8 +12,18 @@ class LoginController extends Controller
         return view('login.index');
     }
 
-    public function authentication($Request){
+    public function authenticate(Request $request){
+        $credentials = $request->validate([
+            'nim' => 'required',
+            'password' => 'required',
+        ]);
+
+        if(Auth::attempt($credentials)){
+            $request->session()->regenerate();
+            return redirect()->intended('/testlogin');
+        }
         
+        return back()->with('loginError', 'login failed!');
     }
 
 }

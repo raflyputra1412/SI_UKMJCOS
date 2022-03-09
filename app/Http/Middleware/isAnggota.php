@@ -16,10 +16,10 @@ class isAnggota
      */
     public function handle(Request $request, Closure $next)
     {
-        if(auth()->user()->jabatan === 'anggota'){
+        if(auth()->user()->jabatan == 'anggota'){
             return $next($request);
         }
 
-        return redirect('home')->with('error','Anda harus menjadi anggota terlebih dahulu!');
+        return redirect('/')->with('error','Anda harus menjadi anggota terlebih dahulu!');
     }
 }

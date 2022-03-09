@@ -24,14 +24,14 @@ class DatabaseSeeder extends Seeder
             'angkatan' => '2017',
             'no_hp' => '089687679663',
             'email' => 'raflyputra68@gmail.com',
-            'password' => bcrypt('12345'),
-            'jabatan' => 'pengurus',
+            'password' => '12345',
+            // 'jabatan' => 'pengurus',
         ]);
 
         super_admin::create([
             'username' => 'username',
             'password' => bcrypt('12345'),
-            'role' => 'pembina',
+            'jabatan' => 'pembina',
         ]);
     }
 }

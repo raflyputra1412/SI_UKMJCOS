@@ -1,7 +1,5 @@
 <?php
 
-use Illuminate\Support\Facades\App;
-
 return [
 
     /*
@@ -42,6 +40,7 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+
 
         // 'super_admin' => [
         //     'driver' => 'session',

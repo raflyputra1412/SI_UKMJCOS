@@ -16,10 +16,10 @@ class isPengurus
      */
     public function handle(Request $request, Closure $next)
     {
-        if(auth()->user()->jabatan === 'pengurus'){
+        if(auth()->user()->jabatan == 'pengurus'){
             return $next($request);
         }
 
-        return redirect('home')->with('error','Anda bukan Pengurus!');
+        return redirect('/')->with('error','Anda bukan Pengurus!');
     }
 }

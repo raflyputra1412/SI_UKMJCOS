@@ -14,5 +14,7 @@ use App\Http\Controllers\LoginController;
 |
 */
 
-Route::get('/',[LoginController::class, 'loginView']);
-Route::get('/home', [HomeController::class, 'home']);
+Route::get('/', [LoginController::class, 'loginView']);
+Route::post('/login', [LoginController::class, 'authenticate']);
+// Route::get('/dashboard_pengurus', [HomeController::class, 'home']);
+Route::get('/testlogin', [HomeController::class, 'home']);
